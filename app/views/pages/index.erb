@@ -1,4 +1,11 @@
 <h1>Welcome to the Pages app!</h1>
 
+<h3>Parse site pages from CSV:</h3>
 <p class='container'>
+  <%= form_with(url: {action: :parse_csv}, multipart: true) do %>
+    <%= file_field_tag('paths_file') %>
+    <br />
+    <br />
+    <%= submit_tag("Parse CSV") %>
+  <% end %>
 </p>

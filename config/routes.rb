@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  get 'pages/index'
   root 'pages#index'
+
+  get 'pages/index'
+  post 'pages/parse_csv'
 end
