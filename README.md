@@ -3,7 +3,7 @@
 This is the Pages demo app based on v3 of the Equisolve demo app outline.
 Here are some features I've included, as well as some extras:
 
-* Page renders alerts based on whether a CSV file in submitted with form
+* Page renders alerts based on whether a CSV file is submitted with form
 * Page renders alerts if no file at all is submitted
 * Added basic styling with SCSS
 * Integration tests for the Pages controller
