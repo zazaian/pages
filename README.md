@@ -1,24 +1,21 @@
-# README
+# Pages (Demo app for Equisolve)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the Pages demo app based on v3 of the Equisolve demo app outline.
+Here are some features I've included, as well as some extras:
 
-Things you may want to cover:
+* Page renders alerts based on whether a CSV file in submitted with form
+* Page renders alerts if no file at all is submitted
+* Added basic styling with SCSS
+* Integration tests for the Pages controller
+* Most parsing and business logic is handled by the PathsParser in /app/parsers
+* Test suite includes 7 tests with 14 assertions, all passing
+* Replaced Webpack with lighter-weight Sprockets for asset management
+* Added jQuery and jQuery-UI for accordion support
+* Used default ERB template rendering (normally I would use HAML or Slim)
+* Used default Rails test suite (normally would use Rspec or minitest)
 
-* Ruby version
+Please let me know if you have any additional questions.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Mike Zazaian
+mike@functionhaus.com
+https://functionhaus.com
