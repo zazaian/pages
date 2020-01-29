@@ -1,8 +1,12 @@
 <% @paths_parser.hierarchy.each do |section_name, subpages| %>
-  <h3><%= "#{section_name} (#{@paths_parser.top_level[section_name]})" %></h3>
+  <h3 class="section-name"><%= "#{section_name} (#{@paths_parser.top_level[section_name]})" %></h3>
   <div class="subpages">
     <% subpages.each do |sub_name, sub_path| %>
-      <div class="subpage">&nbsp;&nbsp;<%= "#{sub_name} (#{sub_path})" %></div>
+      <div class="subpage"><%= "#{sub_name} (#{sub_path})" %></div>
+    <% end %>
+
+    <% if subpages.empty? %>
+      <div class="not-found">No subpages found for this site section.</div>
     <% end %>
   </div>
 <% end %>

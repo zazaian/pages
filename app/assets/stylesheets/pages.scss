@@ -17,3 +17,26 @@ h1 {
   font-style: italic;
   font-size: 0.8em;
 }
+
+h3.section-name {
+  font-style: italic;
+}
+
+input[type=submit] {
+  background-color: #996633;
+  display: block;
+  padding: 4px 8px;
+  border: none;
+  color: white;
+  font-size: 1.8em;
+}
+
+input[type=submit]:hover {
+  background-color: #aa7744;
+}
+
+div.subpage {
+  background: white;
+  color: black;
+  padding: 8px 12px;
+}
