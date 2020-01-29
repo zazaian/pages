@@ -2,6 +2,10 @@
 <div class="author">Built by Mike Zazaian, FunctionHaus LLC</div>
 
 <h3>Parse site pages from CSV:</h3>
+<% if flash[:alert] %>
+  <div class="alert"><%= flash[:alert] %></div>
+<% end %>
+
 <div class='container'>
 
   <%= form_with(url: {action: :parse_csv}, multipart: true) do %>

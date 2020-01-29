@@ -9,6 +9,10 @@ class PathsParser
     @csv_file = csv.instance_variable_get(:@tempfile)
   end
 
+  def csv_valid?
+    csv_file && File.extname(csv_file) == ".csv"
+  end
+
   def parse
     @parsed_csv = CSV.read(csv_file)
     compile_pages
