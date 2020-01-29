@@ -15,4 +15,23 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_equal "/pages/parse_csv", path
   end
+
+  test "posting no CSV file" do
+    get "/"
+
+    # post the login and follow through to the home page
+    post "/pages/parse_csv", params: {paths_file: nil}
+    assert_redirected_to "/"
+    assert_match /No CSV file was submitted./, flash[:alert]
+  end
+
+  test "posting an invalid file type" do
+    get "/"
+
+    # post the login and follow through to the home page
+    png_fixture = fixture_file_upload('test/support/i_heart_logs.png', 'image/png')
+    post "/pages/parse_csv", params: {paths_file: png_fixture}
+    assert_redirected_to "/"
+    assert_match /No CSV file was submitted./, flash[:alert]
+  end
 end
