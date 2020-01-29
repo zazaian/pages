@@ -27,7 +27,19 @@ h1 {
   font-size: 0.8em;
 }
 
+h2.csv-heading {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 h3.section-name {
+  font-style: italic;
+}
+
+h4.filename {
+  color: #6699CC;
+  margin-top: 0;
+  padding-top: 0;
   font-style: italic;
 }
 

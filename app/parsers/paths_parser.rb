@@ -3,10 +3,12 @@ require 'pp'
 
 class PathsParser
 
-  attr_reader :csv_file, :pages_hash, :top_level, :subpages, :hierarchy
+  attr_reader :csv_file, :pages_hash, :top_level,
+    :subpages, :hierarchy, :original_filename
 
   def initialize(csv:)
     @csv_file = csv.instance_variable_get(:@tempfile)
+    @original_filename = csv.instance_variable_get(:@original_filename)
   end
 
   def csv_valid?

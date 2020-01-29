@@ -18,7 +18,11 @@
   <br />
   <br />
 
-  <h2>Most recently submitted CSV pages:</h2>
+  <h2 class="csv-heading">Most recently submitted CSV pages:</h2>
+  <% if @paths_parser && @paths_parser.csv_valid? %>
+    <h4 class="filename">Filename: <%= @paths_parser.original_filename %></h4>
+  <% end %>
+
   <div id="accordion">
     <% if @paths_parser %>
       <%= render 'pages_accordion' %>
