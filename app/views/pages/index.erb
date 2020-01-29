@@ -1,7 +1,7 @@
 <h1>Welcome to the Pages app!</h1>
 
 <h3>Parse site pages from CSV:</h3>
-<p class='container'>
+<div class='container'>
 
   <%= form_with(url: {action: :parse_csv}, multipart: true) do %>
     <%= file_field_tag('paths_file') %>
@@ -16,14 +16,7 @@
   <h2>Most recently submitted CSV pages:</h2>
   <div id="accordion">
     <% if @paths_parser %>
-      <% @paths_parser.hierarchy.each do |section_name, subpages| %>
-        <h3><%= "#{section_name} (#{@paths_parser.top_level[section_name]})" %></h3>
-        <div class="subpages">
-          <% subpages.each do |sub_name, sub_path| %>
-            <div class="subpage">&nbsp;&nbsp;<%= "#{sub_name} (#{sub_path})" %></div>
-          <% end %>
-        </div>
-      <% end %>
+      <%= render 'pages_accordion' %>
     <% end %>
   </div>
-</p>
+</div>

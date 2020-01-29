@@ -1,0 +1,8 @@
+<% @paths_parser.hierarchy.each do |section_name, subpages| %>
+  <h3><%= "#{section_name} (#{@paths_parser.top_level[section_name]})" %></h3>
+  <div class="subpages">
+    <% subpages.each do |sub_name, sub_path| %>
+      <div class="subpage">&nbsp;&nbsp;<%= "#{sub_name} (#{sub_path})" %></div>
+    <% end %>
+  </div>
+<% end %>
