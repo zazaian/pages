@@ -14,14 +14,16 @@
   <br />
 
   <h2>Most recently submitted CSV pages:</h2>
-  <% if @paths_parser %>
-    <% @paths_parser.hierarchy.each do |section_name, subpages| %>
-      <div class="top-level">
-        <h4><%= "#{section_name} (#{@paths_parser.top_level[section_name]})" %></h4>
-        <% subpages.each do |sub_name, sub_path| %>
-          <div class="subpage">&nbsp;&nbsp;<%= "#{sub_name} (#{sub_path})" %></div>
-        <% end %>
-      </div>
+  <div id="accordion">
+    <% if @paths_parser %>
+      <% @paths_parser.hierarchy.each do |section_name, subpages| %>
+        <h3><%= "#{section_name} (#{@paths_parser.top_level[section_name]})" %></h3>
+        <div class="subpages">
+          <% subpages.each do |sub_name, sub_path| %>
+            <div class="subpage">&nbsp;&nbsp;<%= "#{sub_name} (#{sub_path})" %></div>
+          <% end %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </p>
