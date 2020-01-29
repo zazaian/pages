@@ -16,6 +16,6 @@ Here are some features I've included, as well as some extras:
 
 Please let me know if you have any additional questions.
 
-Mike Zazaian
-mike@functionhaus.com
+Mike Zazaian\
+mike@functionhaus.com\
 https://functionhaus.com
