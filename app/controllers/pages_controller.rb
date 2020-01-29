@@ -3,7 +3,9 @@ class PagesController < ApplicationController
   end
 
   def parse_csv
-    parsed_paths = PathsParser.new(csv: params["paths_file"]).parse
+    @paths_parser = PathsParser.new(csv: params["paths_file"])
+    @paths_parser.parse
+
     render template: "pages/index"
   end
 end
