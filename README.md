@@ -1,6 +1,6 @@
-# Pages (Demo app for Equisolve)
+# Pages (Demo app)
 
-This is the Pages demo app based on v3 of the Equisolve demo app outline.
+This is the Pages demo, a really-simple Rails app with some tests, a parser, and some front-end work.
 Here are some features I've included, as well as some extras:
 
 * Page renders alerts based on whether a CSV file is submitted with form
@@ -16,8 +16,6 @@ Here are some features I've included, as well as some extras:
 
 Here is a screenshot of the rendered output of the CSV:\
 ![Pages app happy path screenshot](https://github.com/zazaian/pages/blob/master/app/assets/images/screenshot.png)
-
-Please let me know if you have any additional questions.
 
 Mike Zazaian\
 mike@functionhaus.com\
